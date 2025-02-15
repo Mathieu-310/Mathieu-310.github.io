@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* COLORS */
+    --White: hsl(0, 0%, 100%);
+    --Slate-300: hsl(212, 45%, 89%);
+    --Slate-500: hsl(216, 15%, 48%);
+    --Slate-900: hsl(218, 44%, 22%);
+
+    /* TYPOGRAPHY */
+    --font: "Outfit", serif;
+
+    /* FONT SIZE */
+    --lg: 20px;
+    --md: 15px;
+
+    /* FONT WEIGHT */
+    --bold: 700;
+    --normal: 400;
+}
+
+/* GLOBAL STYLES */
+
+body {
+    font-family: var(--font);
+    background-color: var(--Slate-300);
+    min-height: 100dvh;
+    align-content: center;
+}
+
+main {
+    width: min(90%, 375px);
+    margin-inline: auto;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 7.5px;
+}
+
+h1 {
+    font-size: var(--lg);
+    font-weight: var(--bold);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: var(--md);
+    font-weight: var(--normal);
+    color: var(--Slate-500);
+}
+
+/* UTILITIES */
+
+.container {
+    background-color: var(--White);
+    width: clamp(288px, 90%, 300px);
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+    margin-inline: auto;
+    box-shadow: -2px 4px 5px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.qr-content {
+    max-width: 90%;
+    align-content: center;
+    margin-block: 30px;
+    margin-inline: auto;
+}
+
+/* LARGE SCREENS */
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: var(--White);
+    }
+
+    main {
+        background-color: var(--Slate-300);
+        width: 950px;
+        align-content: center;
+        box-shadow: -2px 4px 2px 1px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.container {
+    margin-block: 30px;
+}
